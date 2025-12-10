@@ -1,4 +1,4 @@
-name: build
+name: compile
 on: [push, pull_request]
 
 jobs:
@@ -38,8 +38,6 @@ jobs:
       shell: bash
       run: |
         cd build && ninja
-
-    # OPTIONAL — download from Actions page
     - name: Upload App
       uses: actions/upload-artifact@v4
       with:
